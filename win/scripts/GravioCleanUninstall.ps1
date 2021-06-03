@@ -7,6 +7,14 @@
 # Deletes files and folders left over
 # Closes Firewall ports from Studio (29440-29450)
 
+# Usage:
+# GravioCleanUninstall -RemoveStudio 1 -RemoveHubkit 1
+#     This will do a dry run of removing Studio if it exists and removing Hubkit if it exists.
+#     Your system will remain unchanged because it is a dry run.
+#
+# GravioCleanUninstall -RemoveStudio 1 -RemoveHubkit 1 -Execute 1
+#     This will do the same thing but will actually execute the commands. 
+
 
 Param(
     [switch]$Execute=$false,
@@ -26,7 +34,7 @@ function Main {
     if(-not $Execute) {
         print ""
         print "This is script is being run in Dry Run mode. It will show you what will be deleted, but not delete the items"
-        print "To actually delete the reported items, run the script again with the --Execute=True argument"
+        print "To actually delete the reported items, run the script again with the -Execute=1 argument"
         print ""
     }
     $regs = FindExistingRegistryItems
