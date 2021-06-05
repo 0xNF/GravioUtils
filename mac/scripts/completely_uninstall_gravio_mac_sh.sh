@@ -79,13 +79,13 @@ fi
 /usr/bin/security -q authorizationdb remove "com.asteria.mac.gravio4.helper.uninstall"
 
 # delete hubkit app, data and log files
-echo "Delete app data..."
+echo "Delete HubKit data..."
 /bin/rm -rf /Applications/Gravio\ HubKit\ 4.app
 /bin/rm -rf /Library/Application\ Support/HubKit
 /bin/rm -rf /Library/Logs/HubKit
 
 # delete cache and preferences
-echo "Delete cache..."
+echo "Delete HubKit cache..."
 /bin/rm -rf $HOME/Library/Caches/com.asteria.mac.gravio4
 /bin/rm -f $HOME/Library/Preferences/com.asteria.mac.gravio4.plist
 
