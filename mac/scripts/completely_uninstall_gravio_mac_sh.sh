@@ -5,6 +5,13 @@ if [ `id -u` -ne 0 ]; then
 	exit 1
 fi
 
+echo "Delete Gravio Studio..."
+
+# delete gravio studio app, data and scripts
+/bin/rm -rf /Applications/Gravio\ Studio\ 4.app
+/bin/rm -rf $HOME/Library/Containers/com.asteria.mac.graviostudio4
+/bin/rm -rf $HOME/Library/Application\ Scripts/com.asteria.mac.graviostudio4
+
 echo "Unload HubKit managers..."
 
 # unload serial port manager
