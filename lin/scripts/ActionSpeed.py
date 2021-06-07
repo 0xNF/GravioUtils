@@ -96,7 +96,7 @@ def parseLine(i, line, executions, executions_by_name):
 def groupBy(execs):
     estats = {}
     for key in execs:
-        emap = [x.delta.total_seconds() for x in execs[key]]
+        emap = [x.delta.total_seconds() * 1000 for x in execs[key]]
         minTime = min(emap)
         maxTime = max(emap)
         mean = statistics.mean(emap)
