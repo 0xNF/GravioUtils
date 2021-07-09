@@ -18,7 +18,7 @@ And ensuring that SSH is switched on.
 1. SSH into the machine
     ```bash
     addr="192.168.200.204"
-    ssh gravio@addr
+    ssh gravio@$addr
     ```
 2. create a directory for the script
     ```
