@@ -79,3 +79,18 @@ net.log
 cpu.log contains `ps` and `top` information, docker.log contains information about the running docker containers used by Gravio, and net.log contains info about the active Network Interfaces.
 
 All of this information may be useful to Gravio Customer Support.
+
+
+## Downloading to your computer
+
+### Grab all the folders created:
+`scp -r gravio@$addr /var/log/graviohub/ ./`
+
+### Grab only the date you want
+Date formats are in `YYYYMMDD`, for instance,   
+1. October 14, 2020 == `20201014`  
+1. July 09, 2020 == `20210709`
+
+Take the date you want and add it to the scp command:
+
+`scp -r gravio@$addr /var/log/graviohub/20210709 ./`
